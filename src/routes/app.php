@@ -151,7 +151,7 @@ $app->get('/api/district',function(Request $request, Response $response){
 		return $response->withHeader('Content-Type', 'application/json')->withStatus(200)->withJson($art, null, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
 
 	}catch(PDOException $e){
-		echo '{ "error": {"text": '.$e->getMessage(). '}';
+		echo '{ "error": {"text": '.$e->getMessage(). '} }';
 	}
 });
 
